@@ -23,6 +23,7 @@ public class CreateFile {
 
         Path path = Paths.get(filename);
         //使用newBufferedWriter创建文件并写入文件
+        //使用try无需手动关闭
         try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
             writer.write("Hello World!! 创建文件");
         }
